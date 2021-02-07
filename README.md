@@ -4,9 +4,11 @@ This small Swift program will run a command whenever the dark mode status change
 
 ## Usage
 
-You can run it directly by doing `./dark-mode-notify.swift <program>`. Alternatively you can compile it by doing `swiftc dark-mode-notify.swift -o /usr/local/bin/dark-mode-notify`.
+You can run it directly by doing `./dark-mode-notify.swift <program>`.
 
-The program will be run immediately when the command starts, and every time the OS goes from dark mode to light mode or back. The environment variable DARKMODE will be set to either 1 or 0.
+Alternatively you can compile it by doing `swiftc dark-mode-notify.swift -o /usr/local/bin/dark-mode-notify`.
+
+The program will be run immediately when the command starts, and every time the OS goes from dark mode to light mode or back. The environment variable `DARKMODE` will be set to either `1` or `0`.
 
 ## Background agent
 
