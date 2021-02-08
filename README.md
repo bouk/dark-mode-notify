@@ -12,7 +12,7 @@ The program will be run immediately when the command starts, and every time the 
 
 ## Background agent
 
-To keep this program running in the background, compile the binary to somewhere and create the following file at `~/Library/LaunchAgents/ke.bou.dark-mode-notify.plist`
+To keep this program running in the background, compile the binary to somewhere and create the following file at `~/Library/LaunchAgents/ke.bou.dark-mode-notify.plist`. Don't forget to replace the arguments and the path to the logs (which comes in handy for debugging)
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -24,6 +24,10 @@ To keep this program running in the background, compile the binary to somewhere 
     <string>ke.bou.dark-mode-notify</string>
     <key>KeepAlive</key>
     <true/>
+    <key>StandardErrorPath</key>
+    <string>----Path to a location----/dark-mode-notify-stderr.log</string>
+    <key>StandardOutPath</key>
+    <string>----Path to a location----/dark-mode-notify-stdout.log</string>
     <key>ProgramArguments</key>
     <array>
        <string>/usr/local/bin/dark-mode-notify</string>
