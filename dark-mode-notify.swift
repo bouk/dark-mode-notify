@@ -35,4 +35,11 @@ DistributedNotificationCenter.default.addObserver(
         shell(args)
 }
 
+NSWorkspace.shared.notificationCenter.addObserver(
+    forName: NSWorkspace.didWakeNotification,
+    object: nil,
+    queue: nil) { (notification) in
+    shell(args)
+}
+
 NSApplication.shared.run()
