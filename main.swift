@@ -1,9 +1,6 @@
-#!/usr/bin/env swift
-
-// Run as ./notify.swift <program to run when dark mode changes>
 // The program will have the DARKMODE env flag set to 1 or 0
-// You can also compile with:
-// swiftc notify.swift -o notify
+// Compile with:
+// swift build
 // And run the binary directly
 // Most credit goes to https://github.com/mnewt/dotemacs/blob/master/bin/dark-mode-notifier.swift
 

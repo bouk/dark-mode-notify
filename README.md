@@ -4,9 +4,13 @@ This small Swift program will run a command whenever the dark mode status change
 
 ## Usage
 
-You can run it directly by doing `./dark-mode-notify.swift <program>`.
+Use make to compile the program, then run directly:
 
-Alternatively you can compile it by doing `swiftc dark-mode-notify.swift -o /usr/local/bin/dark-mode-notify`.
+```shell
+.build/release/dark-mode-notify <your-program>
+```
+
+Alternatively you can install it by doing `make install`.
 
 The program will be run immediately when the command starts, and every time the OS goes from dark mode to light mode or back. The environment variable `DARKMODE` will be set to either `1` or `0`.
 
