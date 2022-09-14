@@ -18,7 +18,7 @@ func shell(_ args: [String]) -> Int32 {
     task.arguments = args
     task.standardError = FileHandle.standardError
     task.standardOutput = FileHandle.standardOutput
-    task.launch()   // Spawn the child process with the new environment variables
+    task.launch() // Spawn the child process with the new environment variables
     task.waitUntilExit()
     return task.terminationStatus
 }
