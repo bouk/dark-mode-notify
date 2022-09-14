@@ -12,7 +12,7 @@ func shell(_ args: [String]) -> Int32 {
     let task = Process()    // The new child process
     let isDark = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") == "Dark"
     var env = ProcessInfo.processInfo.environment // Get the current processes environment variables
-    env["DARKMODE"] = isDark ? "1" : "0"    // Append the DARKMODE environment variable to env
+    env["DARKMODE"] = isDark ? "1" : "0" // Append the DARKMODE environment variable to env
     task.environment = env // Set the child processes environment variables to the current processes environment variables plus DARKMODE
     task.launchPath = "/usr/bin/env"
     task.arguments = args
