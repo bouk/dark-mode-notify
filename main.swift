@@ -9,7 +9,7 @@ import Cocoa
 // Function to spawn a child process that can be used to update 
 @discardableResult
 func shell(_ args: [String]) -> Int32 {
-    let task = Process()    // The new child process
+    let task = Process() // The new child process
     let isDark = UserDefaults.standard.string(forKey: "AppleInterfaceStyle") == "Dark"
     var env = ProcessInfo.processInfo.environment // Get the current processes environment variables
     env["DARKMODE"] = isDark ? "1" : "0" // Append the DARKMODE environment variable to env
